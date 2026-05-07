@@ -13,17 +13,17 @@ pipeline {
         }
         stage('Install') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                bat 'npm run build'
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
             post {
                 always {
@@ -33,10 +33,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh '''
-                    pkill -f "node src/app.js" || true
-                    nohup node src/app.js > app.log 2>&1 &
-                    echo "App deployed successfully!"
+                bat '''
+                    taskkill /F /IM node.exe /T 2>nul || exit /b 0
+                    start /B node src/app.js > app.log 2>&1
+                    echo App deployed successfully!
                 '''
             }
         }
