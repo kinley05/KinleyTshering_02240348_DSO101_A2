@@ -110,3 +110,22 @@ Jenkinsfile should match Jenkins for best practice.
 ### Build History - Successful Pipeline
 ![Build History](screenshots/1.png)
 
+### Successful Build
+![Successful Build](screenshots/2.png)
+
+### Console Output - Pipeline Start & Checkout
+![Console Output 1](screenshots/3.png)
+
+![Console Output 2](screenshots/4.png)
+
+![Console Output 3](screenshots/5.png)
+
+![Console Output 4](screenshots/6.png)
+
+![Console Output 5](screenshots/7.png)
+
+### Console Output - Test Results (3/3 Passed)
+![Test Results](screenshots/8.png)
+
+### Console Output - Deploy Stage & Pipeline Success
+![Deploy & Success](screenshots/9.png)
